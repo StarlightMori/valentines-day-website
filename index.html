@@ -24,32 +24,12 @@
         }
         main {
             padding: 20px;
+            padding-bottom: 500px; /* Increased bottom padding */
             position: relative;
         }
         .video-container {
             margin: 20px auto;
             max-width: 800px;
-        }
-        input {
-            padding: 10px;
-            font-size: 1rem;
-            width: 70%;
-            margin-bottom: 20px;
-            border: 2px solid #d147a3;
-            border-radius: 8px;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 1rem;
-            background-color: #d147a3;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        button:hover {
-            background-color: #a8377b;
         }
         iframe {
             width: 100%;
@@ -69,39 +49,26 @@
         }
         .decorations img {
             position: absolute;
-            width: 100px;
+            width: 500px; /* Default width for images */
             height: auto;
             animation: float 6s infinite ease-in-out;
         }
         .decorations img:nth-child(1) {
-            top: 10%;
-            left: 15%;
+            top: 5%;
+            left: 10%;
         }
         .decorations img:nth-child(2) {
-            top: 20%;
-            right: 10%;
+            top: 10%;
+            right: 12%;
         }
         .decorations img:nth-child(3) {
-            bottom: 15%;
-            left: 20%;
+            bottom: 5%;
+            left: 15%;
         }
         .decorations img:nth-child(4) {
-            bottom: 10%;
-            right: 15%;
-        }
-
-        .below-video-decor {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .below-video-decor img {
-            width: 150px;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 375px; /* Reduced size by 25% */
+            bottom: 1%; 
+            right: 20%;
         }
 
         @keyframes float {
@@ -120,37 +87,15 @@
     </header>
     <main>
         <h2>I have a special gift for you</h2>
-        <div>
-                              </div>
         <div class="video-container" id="videoContainer">
             <iframe src="https://www.youtube.com/embed/6SrzqOo3UTk" allowfullscreen></iframe>
         </div>
-        <div class="below-video-decor">
-            <img src="https://i.imgur.com/wjGnZYU.jpeg" alt="cat">
-            <img src="https://www.freepik.com/free-psd/begonia-flower-isolated-transparent-background_136170509.htm" alt="Heart">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Rose.png" alt="Rose">
-        </div>
         <div class="decorations">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Red_rose_2.png" alt="Flower">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Valentines_day_balloons_2015.jpg" alt="Balloon">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Red_rose_2.png" alt="Flower">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Valentines_day_balloons_2015.jpg" alt="Balloon">
+            <img src="https://i.imgur.com/wjGnZYU.jpeg" alt="Flower">
+            <img src="https://i.imgur.com/8scESMS.jpeg" alt="Balloon">
+            <img src="https://i.imgur.com/UVUo7Hz.jpeg" alt="Flower">
+            <img src="https://i.imgur.com/7duJ8VR.jpeg" alt="Balloon">
         </div>
     </main>
-    <script>
-        function insertVideo() {
-            const videoLink = document.getElementById('videoLink').value;
-            const videoContainer = document.getElementById('videoContainer');
-
-            // Extract YouTube video ID from the link
-            const videoId = videoLink.split('v=')[1]?.split('&')[0] || '';
-
-            if (videoId) {
-                videoContainer.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}" allowfullscreen></iframe>`;
-            } else {
-                alert('Please enter a valid YouTube video link.');
-            }
-        }
-    </script>
 </body>
 </html>
